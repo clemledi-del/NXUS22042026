@@ -23,7 +23,7 @@
 <!-- ============================================= -->
 <!-- HERO -->
 <!-- ============================================= -->
-<section id="decouvrir" style="position: relative; background: linear-gradient(180deg, #ffffff 0%, #f5f8fa 100%); padding: 30px 0 30px 0; overflow: hidden; min-height: 100vh; display: flex; align-items: center;">
+<section id="decouvrir" style="position: relative; background: linear-gradient(180deg, #ffffff 0%, #f5f8fa 100%); padding: 90px 0 90px 0; overflow: hidden;">
 
   <!-- Subtle decorative gradient orb top-right, very light -->
   <div style="position: absolute; top: -200px; right: -200px; width: 700px; height: 700px; background: radial-gradient(circle, rgba(25, 182, 208, 0.1) 0%, rgba(25, 182, 208, 0) 70%); border-radius: 50%; pointer-events: none; z-index: 0;"></div>
@@ -76,10 +76,10 @@
 
         <div style="position: relative; width: 100%; aspect-ratio: 4 / 3.2; max-width: 100%; margin: 0;">
 
-          <!-- Visuel principal — photo HD -->
-          <div style="position: absolute; inset: 0; border-radius: 22px; overflow: hidden; box-shadow: 0 30px 80px rgba(0, 84, 135, 0.18);">
-            <img src="https://website.poolstar.fr/Upload/PAGE%20NEXUS/image1_herosection_poolexnexus.png" alt="Pilotez votre piscine depuis votre smartphone avec Nexus" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-            <!-- Overlay très subtil pour améliorer la lisibilité des cartes flottantes -->
+          <!-- Visuel principal — vidéo YouTube en autoplay -->
+          <div style="position: absolute; inset: 0; border-radius: 22px; overflow: hidden; box-shadow: 0 30px 80px rgba(0, 84, 135, 0.18); background: #000;">
+            <iframe src="https://www.youtube.com/embed/0hiexXuIIyo?autoplay=1&mute=1&loop=1&playlist=0hiexXuIIyo&controls=0&modestbranding=1&playsinline=1&rel=0" title="Poolex Nexus : L'écosystème connecté qui orchestre toute la piscine automatiquement (Cloud &amp; IA)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 50%; left: 50%; width: 177.78vh; height: 100%; min-width: 100%; min-height: 100%; transform: translate(-50%, -50%); border: 0; pointer-events: none;"></iframe>
+            <!-- Overlay très subtil -->
             <div style="position: absolute; inset: 0; background: linear-gradient(120deg, rgba(0, 84, 135, 0.04) 0%, rgba(0, 0, 0, 0) 50%); pointer-events: none;"></div>
           </div>
 
@@ -143,167 +143,16 @@
     }
     @media (max-width: 575px) {
       section#decouvrir h1 { font-size: 38px !important; }
-      section#decouvrir { padding: 50px 0 70px 0 !important; }
+      section#decouvrir { padding: 60px 0 60px 0 !important; }
     }
   </style>
 
 </section>
-
-<!-- ============================================= -->
-<!-- VIDEO SECTION -->
-<!-- ============================================= -->
-<section id="video" style="position: relative; background: linear-gradient(180deg, #f5f8fa 0%, #eef3f6 100%); padding: 40px 0 40px 0; overflow: hidden; min-height: 100vh; display: flex; align-items: center;">
-
-  <!-- Subtle decorative element -->
-  <div style="position: absolute; top: 50%; left: -150px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(25, 182, 208, 0.06) 0%, rgba(25, 182, 208, 0) 70%); border-radius: 50%; transform: translateY(-50%); pointer-events: none; z-index: 0;"></div>
-
-  <div class="container" style="max-width: 1180px; position: relative; z-index: 1; width: 100%;">
-
-    <!-- ========== En-tête texte (centré) ========== -->
-    <div style="text-align: center; max-width: 780px; margin: 0 auto 30px auto;">
-
-      <!-- Eyebrow -->
-      <div style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 22px;">
-        <span style="display: inline-block; width: 20px; height: 1px; background: #19B6D0;"></span>
-        <span style="font-family: 'Ubuntu', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 3px; color: #19B6D0; text-transform: uppercase;">Démo</span>
-        <span style="display: inline-block; width: 20px; height: 1px; background: #19B6D0;"></span>
-      </div>
-
-      <!-- Titre -->
-      <h2 style="font-family: 'Ubuntu', sans-serif; font-size: 38px; line-height: 1.15; font-weight: 300; color: #1d1d1b; margin: 0 0 14px 0; letter-spacing: -0.8px;">
-        Une piscine <span style="font-weight: 700; color: #005487;">plus intelligente</span><br>et plus simple à gérer.
-      </h2>
-
-      <!-- Intro -->
-      <p style="font-family: 'Ubuntu', sans-serif; font-size: 18px; line-height: 1.55; font-weight: 400; color: #6b7378; margin: 0; max-width: 620px; margin-left: auto; margin-right: auto;">
-        Découvrez comment Nexus simplifie la gestion de votre piscine au quotidien.
-      </p>
-
-    </div>
-
-    <!-- ========== Player vidéo 16:9 ========== -->
-    <div style="position: relative; width: 100%; max-width: 900px; margin: 0 auto;">
-
-      <div id="nexusVideoPlayer" style="position: relative; width: 100%; padding-top: 56.25%; border-radius: 20px; overflow: hidden; box-shadow: 0 40px 100px rgba(0, 84, 135, 0.22); cursor: pointer; background: #0a2540;"
-        onclick="
-          var iframe = this.querySelector('.video-iframe');
-          var thumbnail = this.querySelector('.video-thumbnail');
-          iframe.src = iframe.getAttribute('data-video-url');
-          thumbnail.style.display='none';
-          iframe.style.display='block';
-        ">
-
-        <!-- Thumbnail (visible par défaut) -->
-        <div class="video-thumbnail" style="position: absolute; inset: 0; width: 100%; height: 100%;">
-
-          <!-- Image de fond -->
-          <img src="https://website.poolstar.fr/Upload/PAGE%20NEXUS/image1_herosection_poolexnexus.png" alt="Démo Nexus" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-
-          <!-- Overlay sombre cinéma -->
-          <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10, 37, 64, 0.45) 0%, rgba(0, 84, 135, 0.35) 100%); pointer-events: none;"></div>
-
-          <!-- Vignette subtile -->
-          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.25) 100%); pointer-events: none;"></div>
-
-          <!-- Bouton Play -->
-          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; width: 96px; height: 96px; border-radius: 50%; background: rgba(255, 255, 255, 0.22); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1.5px solid rgba(255, 255, 255, 0.4); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); transition: all 0.3s ease;"
-            onmouseover="this.style.background='rgba(255, 255, 255, 0.35)'; this.style.transform='translate(-50%, -50%) scale(1.08)'"
-            onmouseout="this.style.background='rgba(255, 255, 255, 0.22)'; this.style.transform='translate(-50%, -50%) scale(1)'">
-            <svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 5px;">
-              <path d="M28 16L0 32L0 0L28 16Z" fill="#ffffff"/>
-            </svg>
-          </div>
-
-          <!-- Label durée -->
-          <div style="position: absolute; bottom: 24px; left: 24px; background: rgba(0, 0, 0, 0.55); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 6px; padding: 6px 12px; font-family: 'Ubuntu', sans-serif; font-size: 13px; font-weight: 500; color: #ffffff; letter-spacing: 0.3px;">
-            <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #19B6D0; margin-right: 6px; vertical-align: middle;"></span>
-            Vidéo · 1:45
-          </div>
-
-          <!-- Label "Regarder la démo" -->
-          <div style="position: absolute; top: 24px; right: 24px; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 100px; padding: 8px 16px; font-family: 'Ubuntu', sans-serif; font-size: 13px; font-weight: 500; color: #ffffff;">
-            Regarder la démo
-          </div>
-
-        </div>
-
-        <!-- Iframe vidéo -->
-        <iframe class="video-iframe"
-          src=""
-          data-video-url="https://www.youtube.com/embed/f3sg9de2o1M?autoplay=1&mute=1&rel=0"
-          style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-          allow="autoplay; encrypted-media; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-
-      </div>
-
-    </div>
-
-    <!-- ========== 3 mini-points de lecture sous la vidéo ========== -->
-    <div style="max-width: 960px; margin: 30px auto 0 auto;">
-
-      <div class="row" style="margin: 0;">
-
-        <!-- Point 1 -->
-        <div class="col-md-4" style="padding: 20px 24px; text-align: center; border-right: 1px solid rgba(0, 84, 135, 0.1);">
-          <div style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); margin-bottom: 16px;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#005487" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-          </div>
-          <h4 style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #1d1d1b; margin: 0 0 6px 0;">Pilotage à distance</h4>
-          <p style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 400; color: #6b7378; margin: 0; line-height: 1.5;">Depuis votre smartphone,<br>où que vous soyez</p>
-        </div>
-
-        <!-- Point 2 -->
-        <div class="col-md-4" style="padding: 20px 24px; text-align: center; border-right: 1px solid rgba(0, 84, 135, 0.1);">
-          <div style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); margin-bottom: 16px;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#005487" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z"/><path d="M8 14l-2 8 6-3 6 3-2-8"/><circle cx="12" cy="7" r="1.5"/></svg>
-          </div>
-          <h4 style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #1d1d1b; margin: 0 0 6px 0;">Automatisation intelligente</h4>
-          <p style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 400; color: #6b7378; margin: 0; line-height: 1.5;">Des scénarios pilotés<br>par l'IA</p>
-        </div>
-
-        <!-- Point 3 -->
-        <div class="col-md-4" style="padding: 20px 24px; text-align: center;">
-          <div style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); margin-bottom: 16px;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#005487" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          </div>
-          <h4 style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #1d1d1b; margin: 0 0 6px 0;">Suivi en continu</h4>
-          <p style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 400; color: #6b7378; margin: 0; line-height: 1.5;">Température et paramètres<br>en temps réel</p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <style>
-    @media (max-width: 991px) {
-      section#video h2 { font-size: 36px !important; }
-      section#video { padding: 80px 0 90px 0 !important; min-height: auto !important; }
-    }
-    @media (max-width: 767px) {
-      section#video .col-md-4 {
-        border-right: none !important;
-        border-bottom: 1px solid rgba(0, 84, 135, 0.1);
-        padding: 24px !important;
-      }
-      section#video .col-md-4:last-child { border-bottom: none !important; }
-    }
-    @media (max-width: 575px) {
-      section#video h2 { font-size: 28px !important; }
-      section#video { padding: 60px 0 70px 0 !important; }
-    }
-  </style>
-
-</section>
-
 
 <!-- ============================================= -->
 <!-- SECTION "C'EST QUOI CONCRÈTEMENT ?" -->
 <!-- ============================================= -->
-<section id="fonctionnalites" style="position: relative; background: #ffffff; padding: 24px 0 24px 0; overflow: hidden; min-height: 100vh; display: flex; align-items: center;">
+<section id="fonctionnalites" style="position: relative; background: #ffffff; padding: 90px 0 90px 0; overflow: hidden;">
 
   <!-- Decorative gradient orb -->
   <div style="position: absolute; top: 20%; right: -200px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(25, 182, 208, 0.05) 0%, rgba(25, 182, 208, 0) 70%); border-radius: 50%; pointer-events: none; z-index: 0;"></div>
@@ -333,7 +182,7 @@
 
         <!-- Paragraphe 2 -->
         <p style="font-family: 'Ubuntu', sans-serif; font-size: 17px; line-height: 1.65; font-weight: 400; color: #6b7378; margin: 0 0 32px 0;">
-          Mais Nexus va plus loin qu'un simple contrôle à distance : il assure un <span style="font-weight: 500; color: #2d3336;">suivi technique en continu</span>, avec des automatisations intelligentes et des scénarios pilotés par l'IA pour optimiser le fonctionnement de vos équipements.
+          Le système connecté Nexus de Poolex vous permet de <span style="font-weight: 500; color: #2d3336;">piloter tous les équipements de votre local technique</span> directement depuis une seule interface, où que vous soyez.
         </p>
 
         <!-- Citation décorative (reprise baseline brochure) -->
@@ -357,128 +206,6 @@
 
     </div>
 
-    <!-- ============================================= -->
-    <!-- Sous-bloc : 4 cards horizontales -->
-    <!-- ============================================= -->
-    <div style="margin-top: 30px;">
-
-      <div class="row" style="margin: 0 -10px;">
-
-        <!-- Card 1 : Filtration -->
-        <div class="col-md-6 col-lg-3" style="padding: 10px;">
-          <a href="https://www.poolex.fr/fr/produit/filtration-piscine-poolex-variline-pompe-de-filtration-a-vitesse-variable-wifi" target="_blank" rel="noopener" style="display: block; text-decoration: none; color: inherit; height: 100%;">
-          <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 16px; padding: 0; height: 100%; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 20px 40px rgba(0, 84, 135, 0.12)'; this.style.borderColor='rgba(25, 182, 208, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'">
-
-            <!-- Zone image produit (placeholder - à remplacer par <img src="assets/filtration.png"> -->
-            <div style="position: relative; width: 100%; aspect-ratio: 4 / 3; background: linear-gradient(135deg, #f5f8fa 0%, #eaf4f6 100%); display: flex; align-items: center; justify-content: center; overflow: hidden;">
-              <!-- Pastille catégorie couleur -->
-              <div style="position: absolute; top: 14px; left: 14px; display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(8px); border-radius: 100px; padding: 4px 10px; font-family: 'Ubuntu', sans-serif; font-size: 10px; font-weight: 500; color: #19B6D0; letter-spacing: 1px; text-transform: uppercase;">
-                <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #19B6D0;"></span>Filtration
-              </div>
-              <!-- Image produit Filtration -->
-              <img src="https://website.poolstar.fr/Upload/PAGE%20NEXUS/1.png" alt="Pompe de filtration Poolex" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-            </div>
-
-            <!-- Contenu texte -->
-            <div style="padding: 22px 24px 24px 24px;">
-              <h4 style="font-family: 'Ubuntu', sans-serif; font-size: 18px; font-weight: 500; color: #1d1d1b; margin: 0 0 8px 0;">Filtration</h4>
-              <p style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 400; color: #6b7378; margin: 0; line-height: 1.5;">Adaptation automatique aux besoins réels du bassin</p>
-            </div>
-
-          </div>
-          </a>
-        </div>
-
-        <!-- Card 2 : Chauffage -->
-        <div class="col-md-6 col-lg-3" style="padding: 10px;">
-          <a href="https://www.poolex.fr/fr/catalogue/chauffage-pompe-a-chaleur" target="_blank" rel="noopener" style="display: block; text-decoration: none; color: inherit; height: 100%;">
-          <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 16px; padding: 0; height: 100%; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 20px 40px rgba(246, 159, 25, 0.15)'; this.style.borderColor='rgba(246, 159, 25, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'">
-
-            <!-- Zone image produit -->
-            <div style="position: relative; width: 100%; aspect-ratio: 4 / 3; background: linear-gradient(135deg, #f5f8fa 0%, #fdf3e4 100%); display: flex; align-items: center; justify-content: center; overflow: hidden;">
-              <div style="position: absolute; top: 14px; left: 14px; display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(8px); border-radius: 100px; padding: 4px 10px; font-family: 'Ubuntu', sans-serif; font-size: 10px; font-weight: 500; color: #F69F19; letter-spacing: 1px; text-transform: uppercase;">
-                <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #F69F19;"></span>Chauffage
-              </div>
-              <!-- Image produit Chauffage -->
-              <img src="https://website.poolstar.fr/Upload/PAGE%20NEXUS/3.png" alt="Pompe à chaleur Poolex" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-            </div>
-
-            <div style="padding: 22px 24px 24px 24px;">
-              <h4 style="font-family: 'Ubuntu', sans-serif; font-size: 18px; font-weight: 500; color: #1d1d1b; margin: 0 0 8px 0;">Chauffage</h4>
-              <p style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 400; color: #6b7378; margin: 0; line-height: 1.5;">Température idéale pilotée 6 mois de l'année</p>
-            </div>
-
-          </div>
-          </a>
-        </div>
-
-        <!-- Card 3 : Traitement -->
-        <div class="col-md-6 col-lg-3" style="padding: 10px;">
-          <a href="https://www.poolex.fr/fr/catalogue/traitement-electrolyseur-piscine" target="_blank" rel="noopener" style="display: block; text-decoration: none; color: inherit; height: 100%;">
-          <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 16px; padding: 0; height: 100%; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 20px 40px rgba(137, 30, 130, 0.12)'; this.style.borderColor='rgba(137, 30, 130, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'">
-
-            <!-- Zone image produit -->
-            <div style="position: relative; width: 100%; aspect-ratio: 4 / 3; background: linear-gradient(135deg, #f5f8fa 0%, #f3e7f3 100%); display: flex; align-items: center; justify-content: center; overflow: hidden;">
-              <div style="position: absolute; top: 14px; left: 14px; display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(8px); border-radius: 100px; padding: 4px 10px; font-family: 'Ubuntu', sans-serif; font-size: 10px; font-weight: 500; color: #891e82; letter-spacing: 1px; text-transform: uppercase;">
-                <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #891e82;"></span>Traitement
-              </div>
-              <!-- Image produit Traitement -->
-              <img src="https://website.poolstar.fr/Upload/PAGE%20NEXUS/2.png" alt="Électrolyseur Poolex" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-            </div>
-
-            <div style="padding: 22px 24px 24px 24px;">
-              <h4 style="font-family: 'Ubuntu', sans-serif; font-size: 18px; font-weight: 500; color: #1d1d1b; margin: 0 0 8px 0;">Traitement</h4>
-              <p style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 400; color: #6b7378; margin: 0; line-height: 1.5;">Production de chlore et équilibre réglés à distance</p>
-            </div>
-
-          </div>
-          </a>
-        </div>
-
-        <!-- Card 4 : Cloud IA -->
-        <div class="col-md-6 col-lg-3" style="padding: 10px;">
-          <div style="background: linear-gradient(135deg, #005487 0%, #19B6D0 100%); border: 1px solid transparent; border-radius: 16px; padding: 0; height: 100%; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 20px 40px rgba(0, 84, 135, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-
-            <!-- Zone visuelle : Logo IA dominant avec cloud en arrière-plan -->
-            <div style="position: relative; width: 100%; aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-
-              <!-- Pastille catégorie -->
-              <div style="position: absolute; top: 14px; left: 14px; display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.18); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 100px; padding: 4px 10px; font-family: 'Ubuntu', sans-serif; font-size: 10px; font-weight: 500; color: #ffffff; letter-spacing: 1px; text-transform: uppercase; z-index: 2;">
-                <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #ffffff;"></span>Intelligence
-              </div>
-
-              <!-- Points décoratifs en arrière-plan -->
-              <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.5; z-index: 0;">
-                <circle cx="25" cy="30" r="3" fill="#ffffff"/>
-                <circle cx="175" cy="25" r="3" fill="#ffffff"/>
-                <circle cx="20" cy="115" r="3" fill="#ffffff"/>
-                <circle cx="180" cy="120" r="3" fill="#ffffff"/>
-                <circle cx="100" cy="18" r="2.5" fill="#ffffff" opacity="0.8"/>
-                <circle cx="100" cy="130" r="2.5" fill="#ffffff" opacity="0.8"/>
-                <line x1="25" y1="30" x2="100" y2="75" stroke="#ffffff" stroke-width="0.8" opacity="0.35" stroke-dasharray="2 3"/>
-                <line x1="175" y1="25" x2="100" y2="75" stroke="#ffffff" stroke-width="0.8" opacity="0.35" stroke-dasharray="2 3"/>
-                <line x1="20" y1="115" x2="100" y2="75" stroke="#ffffff" stroke-width="0.8" opacity="0.35" stroke-dasharray="2 3"/>
-                <line x1="180" y1="120" x2="100" y2="75" stroke="#ffffff" stroke-width="0.8" opacity="0.35" stroke-dasharray="2 3"/>
-              </svg>
-
-              <!-- Logo IA au centre, bien visible, dans un rond blanc translucide -->
-              <div style="position: relative; z-index: 1; background: rgba(255, 255, 255, 0.96); border-radius: 50%; width: 96px; height: 96px; display: flex; align-items: center; justify-content: center; padding: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);">
-                <img src="https://website.poolstar.fr/Upload/PAGE%20NEXUS/logo_ia_poolex_nexus-removebg-preview.png" alt="IA Poolex Nexus" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-              </div>
-            </div>
-
-            <!-- Contenu texte -->
-            <div style="padding: 22px 24px 24px 24px;">
-              <h4 style="font-family: 'Ubuntu', sans-serif; font-size: 18px; font-weight: 500; color: #ffffff; margin: 0 0 8px 0;">Cloud IA</h4>
-              <p style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 400; color: rgba(255, 255, 255, 0.85); margin: 0; line-height: 1.5;">Intelligence embarquée qui orchestre l'ensemble</p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </div>
 
   </div>
 
@@ -492,169 +219,7 @@
     }
     @media (max-width: 575px) {
       section#fonctionnalites h2 { font-size: 30px !important; }
-      section#fonctionnalites { padding: 80px 0 70px 0 !important; }
-    }
-  </style>
-
-</section>
-
-<!-- ============================================= -->
-<!-- SECTION "DEPUIS L'APPLICATION POOLEX" -->
-<!-- ============================================= -->
-<section id="application" style="position: relative; background: linear-gradient(180deg, #f5f8fa 0%, #ffffff 100%); padding: 24px 0 24px 0; overflow: hidden; min-height: 100vh; display: flex; align-items: center;">
-
-  <!-- Decorative gradient orb -->
-  <div style="position: absolute; top: 20%; left: -200px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(25, 182, 208, 0.06) 0%, rgba(25, 182, 208, 0) 70%); border-radius: 50%; pointer-events: none; z-index: 0;"></div>
-
-  <div class="container" style="max-width: 1240px; position: relative; z-index: 1; width: 100%;">
-
-    <!-- ========== En-tête texte centré ========== -->
-    <div style="text-align: center; max-width: 760px; margin: 0 auto 32px auto;">
-
-      <!-- Eyebrow -->
-      <div style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 22px;">
-        <span style="display: inline-block; width: 20px; height: 1px; background: #19B6D0;"></span>
-        <span style="font-family: 'Ubuntu', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 3px; color: #19B6D0; text-transform: uppercase;">Application Poolex</span>
-        <span style="display: inline-block; width: 20px; height: 1px; background: #19B6D0;"></span>
-      </div>
-
-      <!-- Titre -->
-      <h2 style="font-family: 'Ubuntu', sans-serif; font-size: 38px; line-height: 1.1; font-weight: 300; color: #1d1d1b; margin: 0 0 14px 0; letter-spacing: -1px;">
-        Depuis l'application Poolex,<br><span style="font-weight: 700; color: #005487;">vous pouvez.</span>
-      </h2>
-
-      <!-- Intro courte -->
-      <p style="font-family: 'Ubuntu', sans-serif; font-size: 17px; line-height: 1.55; font-weight: 400; color: #6b7378; margin: 0; max-width: 620px; margin-left: auto; margin-right: auto;">
-        Huit fonctions pour piloter, surveiller et laisser Nexus optimiser votre piscine au quotidien.
-      </p>
-
-    </div>
-
-    <!-- ========== Grille 2 colonnes : Cards (gauche) + Mockup (droite) ========== -->
-    <div class="row align-items-center" style="margin: 0;">
-
-      <!-- Colonne gauche : Grille 2×4 cards -->
-      <div class="col-lg-7" style="padding: 0 10px;">
-
-        <div class="row" style="margin: 0 -8px;">
-
-          <!-- Card 1 : Configurer votre installation -->
-          <div class="col-sm-6" style="padding: 8px;">
-            <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 16px; padding: 18px 18px 16px 18px; height: 100%; min-height: 130px; transition: all 0.3s ease; cursor: pointer; position: relative;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 16px 40px rgba(0, 84, 135, 0.1)'; this.style.borderColor='rgba(25, 182, 208, 0.3)'; this.querySelector('.feat-icon-bg').style.background='#19B6D0'; this.querySelector('.feat-icon').style.stroke='#ffffff'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'; this.querySelector('.feat-icon-bg').style.background='rgba(25, 182, 208, 0.1)'; this.querySelector('.feat-icon').style.stroke='#005487'">
-              <div class="feat-icon-bg" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); margin-bottom: 10px; transition: background 0.3s ease;">
-                <svg class="feat-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#005487" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transition: stroke 0.3s ease;"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-              </div>
-              <h4 style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 500; color: #1d1d1b; margin: 0; line-height: 1.4;">Configurer votre installation<br>simplement</h4>
-            </div>
-          </div>
-
-          <!-- Card 2 : Filtration ajustée automatiquement -->
-          <div class="col-sm-6" style="padding: 8px;">
-            <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 16px; padding: 18px 18px 16px 18px; height: 100%; min-height: 130px; transition: all 0.3s ease; cursor: pointer; position: relative;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 16px 40px rgba(0, 84, 135, 0.1)'; this.style.borderColor='rgba(25, 182, 208, 0.3)'; this.querySelector('.feat-icon-bg').style.background='#19B6D0'; this.querySelector('.feat-icon').style.stroke='#ffffff'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'; this.querySelector('.feat-icon-bg').style.background='rgba(25, 182, 208, 0.1)'; this.querySelector('.feat-icon').style.stroke='#005487'">
-              <div class="feat-icon-bg" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); margin-bottom: 10px; transition: background 0.3s ease;">
-                <svg class="feat-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#005487" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transition: stroke 0.3s ease;"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg>
-              </div>
-              <h4 style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 500; color: #1d1d1b; margin: 0; line-height: 1.4;">Filtration ajustée<br>automatiquement</h4>
-            </div>
-          </div>
-
-          <!-- Card 3 : Suivre température et paramètres -->
-          <div class="col-sm-6" style="padding: 8px;">
-            <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 16px; padding: 18px 18px 16px 18px; height: 100%; min-height: 130px; transition: all 0.3s ease; cursor: pointer; position: relative;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 16px 40px rgba(0, 84, 135, 0.1)'; this.style.borderColor='rgba(25, 182, 208, 0.3)'; this.querySelector('.feat-icon-bg').style.background='#19B6D0'; this.querySelector('.feat-icon').style.stroke='#ffffff'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'; this.querySelector('.feat-icon-bg').style.background='rgba(25, 182, 208, 0.1)'; this.querySelector('.feat-icon').style.stroke='#005487'">
-              <div class="feat-icon-bg" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); margin-bottom: 10px; transition: background 0.3s ease;">
-                <svg class="feat-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#005487" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transition: stroke 0.3s ease;"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
-              </div>
-              <h4 style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 500; color: #1d1d1b; margin: 0; line-height: 1.4;">Suivre la température<br>en temps réel</h4>
-            </div>
-          </div>
-
-          <!-- Card 4 : Maîtrise température -->
-          <div class="col-sm-6" style="padding: 8px;">
-            <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 16px; padding: 18px 18px 16px 18px; height: 100%; min-height: 130px; transition: all 0.3s ease; cursor: pointer; position: relative;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 16px 40px rgba(0, 84, 135, 0.1)'; this.style.borderColor='rgba(25, 182, 208, 0.3)'; this.querySelector('.feat-icon-bg').style.background='#19B6D0'; this.querySelector('.feat-icon').style.stroke='#ffffff'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'; this.querySelector('.feat-icon-bg').style.background='rgba(25, 182, 208, 0.1)'; this.querySelector('.feat-icon').style.stroke='#005487'">
-              <div class="feat-icon-bg" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); margin-bottom: 10px; transition: background 0.3s ease;">
-                <svg class="feat-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#005487" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transition: stroke 0.3s ease;"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/></svg>
-              </div>
-              <h4 style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 500; color: #1d1d1b; margin: 0; line-height: 1.4;">Maîtrise de la<br>température de l'eau</h4>
-            </div>
-          </div>
-
-          <!-- Card 5 : Alertes -->
-          <div class="col-sm-6" style="padding: 8px;">
-            <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 16px; padding: 18px 18px 16px 18px; height: 100%; min-height: 130px; transition: all 0.3s ease; cursor: pointer; position: relative;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 16px 40px rgba(0, 84, 135, 0.1)'; this.style.borderColor='rgba(25, 182, 208, 0.3)'; this.querySelector('.feat-icon-bg').style.background='#19B6D0'; this.querySelector('.feat-icon').style.stroke='#ffffff'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'; this.querySelector('.feat-icon-bg').style.background='rgba(25, 182, 208, 0.1)'; this.querySelector('.feat-icon').style.stroke='#005487'">
-              <div class="feat-icon-bg" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); margin-bottom: 10px; transition: background 0.3s ease;">
-                <svg class="feat-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#005487" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transition: stroke 0.3s ease;"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-              </div>
-              <h4 style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 500; color: #1d1d1b; margin: 0; line-height: 1.4;">Recevoir des alertes<br>en cas d'anomalie</h4>
-            </div>
-          </div>
-
-          <!-- Card 6 : Traitement régulé -->
-          <div class="col-sm-6" style="padding: 8px;">
-            <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 16px; padding: 18px 18px 16px 18px; height: 100%; min-height: 130px; transition: all 0.3s ease; cursor: pointer; position: relative;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 16px 40px rgba(0, 84, 135, 0.1)'; this.style.borderColor='rgba(25, 182, 208, 0.3)'; this.querySelector('.feat-icon-bg').style.background='#19B6D0'; this.querySelector('.feat-icon').style.stroke='#ffffff'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'; this.querySelector('.feat-icon-bg').style.background='rgba(25, 182, 208, 0.1)'; this.querySelector('.feat-icon').style.stroke='#005487'">
-              <div class="feat-icon-bg" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); margin-bottom: 10px; transition: background 0.3s ease;">
-                <svg class="feat-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#005487" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transition: stroke 0.3s ease;"><path d="M12 2l6 9a6 6 0 1 1-12 0l6-9z"/></svg>
-              </div>
-              <h4 style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 500; color: #1d1d1b; margin: 0; line-height: 1.4;">Traitement régulé<br>précisément</h4>
-            </div>
-          </div>
-
-          <!-- Card 7 : Piloter à distance -->
-          <div class="col-sm-6" style="padding: 8px;">
-            <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 16px; padding: 18px 18px 16px 18px; height: 100%; min-height: 130px; transition: all 0.3s ease; cursor: pointer; position: relative;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 16px 40px rgba(0, 84, 135, 0.1)'; this.style.borderColor='rgba(25, 182, 208, 0.3)'; this.querySelector('.feat-icon-bg').style.background='#19B6D0'; this.querySelector('.feat-icon').style.stroke='#ffffff'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'; this.querySelector('.feat-icon-bg').style.background='rgba(25, 182, 208, 0.1)'; this.querySelector('.feat-icon').style.stroke='#005487'">
-              <div class="feat-icon-bg" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); margin-bottom: 10px; transition: background 0.3s ease;">
-                <svg class="feat-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#005487" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transition: stroke 0.3s ease;"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/><path d="M5 6h14"/></svg>
-              </div>
-              <h4 style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 500; color: #1d1d1b; margin: 0; line-height: 1.4;">Piloter vos équipements<br>à distance</h4>
-            </div>
-          </div>
-
-          <!-- Card 8 : Mises à jour OTA -->
-          <div class="col-sm-6" style="padding: 8px;">
-            <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 16px; padding: 18px 18px 16px 18px; height: 100%; min-height: 130px; transition: all 0.3s ease; cursor: pointer; position: relative;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 16px 40px rgba(0, 84, 135, 0.1)'; this.style.borderColor='rgba(25, 182, 208, 0.3)'; this.querySelector('.feat-icon-bg').style.background='#19B6D0'; this.querySelector('.feat-icon').style.stroke='#ffffff'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'; this.querySelector('.feat-icon-bg').style.background='rgba(25, 182, 208, 0.1)'; this.querySelector('.feat-icon').style.stroke='#005487'">
-              <div class="feat-icon-bg" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); margin-bottom: 10px; transition: background 0.3s ease;">
-                <svg class="feat-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#005487" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transition: stroke 0.3s ease;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              </div>
-              <h4 style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 500; color: #1d1d1b; margin: 0; line-height: 1.4;">Mises à jour logicielles<br>à distance</h4>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- Colonne droite : Mockup app grand format -->
-      <div class="col-lg-5" style="padding: 0 10px; text-align: center;">
-        <div style="position: relative; display: inline-block; padding: 0 20px;">
-          <!-- Halo lumineux derrière le téléphone -->
-          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 110%; height: 80%; background: radial-gradient(ellipse at center, rgba(25, 182, 208, 0.25) 0%, rgba(25, 182, 208, 0) 70%); pointer-events: none; z-index: 0;"></div>
-          <!-- Image mockup -->
-          <img src="https://website.poolstar.fr/Upload/PAGE%20NEXUS/visuel_app_poolex_nexus.png" alt="Application Poolex Nexus" style="position: relative; z-index: 1; max-width: 100%; width: 300px; height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 40px 80px rgba(0, 84, 135, 0.25));">
-        </div>
-
-        <!-- Store badge -->
-        <div style="display: flex; justify-content: center; align-items: center; margin-top: 24px;">
-          <a href="https://www.poolex.fr/fr/page/wifi" target="_blank" rel="noopener" style="display: inline-block; transition: transform 0.25s ease; border-radius: 8px; overflow: hidden;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-            <img src="https://website.poolstar.fr/Upload/PAGE%20NEXUS/visuel_app_stroe_page_poolex_nexus.png" alt="Télécharger l'application Poolex" style="height: 56px; width: auto; display: block;">
-          </a>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- Responsive Section "Application" -->
-  <style>
-    @media (max-width: 991px) {
-      section#application h2 { font-size: 38px !important; }
-      section#application .col-lg-5 { margin-top: 30px; }
-      section#application .col-lg-5 img { width: 300px !important; }
-    }
-    @media (max-width: 575px) {
-      section#application h2 { font-size: 30px !important; }
-      section#application { padding: 80px 0 80px 0 !important; }
-      section#application .col-lg-5 img { width: 260px !important; }
+      section#fonctionnalites { padding: 60px 0 60px 0 !important; }
     }
   </style>
 
@@ -663,7 +228,7 @@
 <!-- ============================================= -->
 <!-- SECTION "VOS BÉNÉFICES AU QUOTIDIEN" -->
 <!-- ============================================= -->
-<section id="benefices" style="position: relative; background: #ffffff; padding: 24px 0 24px 0; overflow: hidden; min-height: 100vh; display: flex; align-items: center;">
+<section id="benefices" style="position: relative; background: #ffffff; padding: 90px 0 90px 0; overflow: hidden;">
 
   <!-- Decorative subtle background -->
   <div style="position: absolute; top: 40%; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(25, 182, 208, 0.04) 0%, rgba(25, 182, 208, 0) 70%); border-radius: 50%; pointer-events: none; z-index: 0;"></div>
@@ -787,7 +352,7 @@
               <span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: rgba(25, 182, 208, 0.2); flex-shrink: 0; margin-top: 2px;">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#19B6D0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
               </span>
-              <span style="font-family: 'Ubuntu', sans-serif; font-size: 14px; line-height: 1.45; color: #2d3336; font-weight: 400;">Performance et durée de vie accrues</span>
+              <span style="font-family: 'Ubuntu', sans-serif; font-size: 14px; line-height: 1.45; color: #2d3336; font-weight: 400;">Performance et durée des équipements accrues</span>
             </li>
           </ul>
 
@@ -857,7 +422,160 @@
     }
     @media (max-width: 575px) {
       section#benefices h2 { font-size: 30px !important; }
-      section#benefices { padding: 80px 0 80px 0 !important; }
+      section#benefices { padding: 60px 0 60px 0 !important; }
+    }
+  </style>
+
+</section>
+
+<!-- ============================================= -->
+<!-- SECTION "GESTION AUTOMATISÉE ET CONTRÔLE CENTRALISÉ" -->
+<!-- ============================================= -->
+<section id="application" style="position: relative; background: linear-gradient(180deg, #f5f8fa 0%, #ffffff 100%); padding: 90px 0 90px 0; overflow: hidden;">
+
+  <!-- Decorative orb -->
+  <div style="position: absolute; top: 20%; left: -200px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(25, 182, 208, 0.06) 0%, rgba(25, 182, 208, 0) 70%); border-radius: 50%; pointer-events: none; z-index: 0;"></div>
+
+  <div class="container" style="max-width: 1280px; position: relative; z-index: 1; width: 100%;">
+
+    <!-- ========== En-tête centré ========== -->
+    <div style="text-align: center; max-width: 820px; margin: 0 auto 36px auto;">
+      <div style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+        <span style="display: inline-block; width: 20px; height: 1px; background: #19B6D0;"></span>
+        <span style="font-family: 'Ubuntu', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 3px; color: #19B6D0; text-transform: uppercase;">Application Poolex</span>
+        <span style="display: inline-block; width: 20px; height: 1px; background: #19B6D0;"></span>
+      </div>
+      <h2 style="font-family: 'Ubuntu', sans-serif; font-size: 38px; line-height: 1.1; font-weight: 300; color: #1d1d1b; margin: 0 0 18px 0; letter-spacing: -1px;">
+        Gestion automatisée et <span style="font-weight: 700; color: #005487;">contrôle centralisé.</span>
+      </h2>
+      <p style="font-family: 'Ubuntu', sans-serif; font-size: 16px; line-height: 1.55; font-weight: 400; color: #6b7378; margin: 0; max-width: 760px; margin-left: auto; margin-right: auto;">
+        La connectivité est directement intégrée aux équipements Poolex sans installation supplémentaire à mettre en place, <span style="color: #005487; font-weight: 500;">tous vos équipements sont réunis dans une seule application</span>.
+      </p>
+    </div>
+
+    <!-- ========== 2 colonnes : Rubriques | Mockup ========== -->
+    <div class="row align-items-center" style="margin: 0;">
+
+      <!-- Colonne gauche : 2 rubriques -->
+      <div class="col-lg-7" style="padding: 0 20px;">
+
+        <!-- Rubrique 1 -->
+        <div style="margin-bottom: 30px;">
+          <h3 style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #005487; margin: 0 0 18px 0; letter-spacing: -0.2px;">
+            Depuis l'application Poolex, vous pouvez :
+          </h3>
+          <div class="row" style="margin: 0 -8px;">
+
+            <div class="col-sm-6" style="padding: 8px;">
+              <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 14px; padding: 16px; display: flex; align-items: center; gap: 14px; transition: all 0.3s ease; min-height: 84px;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 28px rgba(0, 84, 135, 0.08)'; this.style.borderColor='rgba(25, 182, 208, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'">
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); flex-shrink: 0;">
+                  <img src="https://website.poolstar.fr/Upload/PAGE%20NEXUS/NEXUS_Configurer.svg" alt="" style="width: 28px; height: 28px; display: block;">
+                </div>
+                <span style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #1d1d1b; line-height: 1.35;">Configurer votre installation simplement</span>
+              </div>
+            </div>
+
+            <div class="col-sm-6" style="padding: 8px;">
+              <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 14px; padding: 16px; display: flex; align-items: center; gap: 14px; transition: all 0.3s ease; min-height: 84px;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 28px rgba(0, 84, 135, 0.08)'; this.style.borderColor='rgba(25, 182, 208, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'">
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); flex-shrink: 0;">
+                  <img src="https://website.poolstar.fr/Upload/PAGE%20NEXUS/NEXUS_Piloter.svg" alt="" style="width: 28px; height: 28px; display: block;">
+                </div>
+                <span style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #1d1d1b; line-height: 1.35;">Piloter vos équipements à distance</span>
+              </div>
+            </div>
+
+            <div class="col-sm-6" style="padding: 8px;">
+              <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 14px; padding: 16px; display: flex; align-items: center; gap: 14px; transition: all 0.3s ease; min-height: 84px;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 28px rgba(0, 84, 135, 0.08)'; this.style.borderColor='rgba(25, 182, 208, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'">
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); flex-shrink: 0;">
+                  <img src="https://website.poolstar.fr/Upload/PAGE%20NEXUS/NEXUS_Suivre.svg" alt="" style="width: 28px; height: 28px; display: block;">
+                </div>
+                <span style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #1d1d1b; line-height: 1.35;">Suivre la température et les paramètres de l'eau en temps réel</span>
+              </div>
+            </div>
+
+            <div class="col-sm-6" style="padding: 8px;">
+              <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 14px; padding: 16px; display: flex; align-items: center; gap: 14px; transition: all 0.3s ease; min-height: 84px;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 28px rgba(0, 84, 135, 0.08)'; this.style.borderColor='rgba(25, 182, 208, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'">
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); flex-shrink: 0;">
+                  <img src="https://website.poolstar.fr/Upload/PAGE%20NEXUS/NEXUS_Alertes.svg" alt="" style="width: 28px; height: 28px; display: block;">
+                </div>
+                <span style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #1d1d1b; line-height: 1.35;">Recevoir des alertes en cas d'anomalie</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Rubrique 2 -->
+        <div>
+          <h3 style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #005487; margin: 0 0 18px 0; letter-spacing: -0.2px;">
+            Poolex Nexus pilote votre piscine en continu grâce à l'intelligence embarquée et au Cloud IA :
+          </h3>
+          <div class="row" style="margin: 0 -8px;">
+
+            <div class="col-sm-6" style="padding: 8px;">
+              <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 14px; padding: 16px; display: flex; align-items: center; gap: 14px; transition: all 0.3s ease; min-height: 84px;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 28px rgba(0, 84, 135, 0.08)'; this.style.borderColor='rgba(25, 182, 208, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'">
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); flex-shrink: 0;">
+                  <img src="https://website.poolstar.fr/Upload/PAGE%20NEXUS/NEXUS_Filtration.svg" alt="" style="width: 28px; height: 28px; display: block;">
+                </div>
+                <span style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #1d1d1b; line-height: 1.35;">Filtration ajustée automatiquement</span>
+              </div>
+            </div>
+
+            <div class="col-sm-6" style="padding: 8px;">
+              <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 14px; padding: 16px; display: flex; align-items: center; gap: 14px; transition: all 0.3s ease; min-height: 84px;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 28px rgba(0, 84, 135, 0.08)'; this.style.borderColor='rgba(25, 182, 208, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'">
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); flex-shrink: 0;">
+                  <img src="https://website.poolstar.fr/Upload/PAGE%20NEXUS/NEXUS_Temperature.svg" alt="" style="width: 28px; height: 28px; display: block;">
+                </div>
+                <span style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #1d1d1b; line-height: 1.35;">Maîtrise de la température de l'eau</span>
+              </div>
+            </div>
+
+            <div class="col-sm-6" style="padding: 8px;">
+              <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 14px; padding: 16px; display: flex; align-items: center; gap: 14px; transition: all 0.3s ease; min-height: 84px;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 28px rgba(0, 84, 135, 0.08)'; this.style.borderColor='rgba(25, 182, 208, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'">
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); flex-shrink: 0;">
+                  <img src="https://website.poolstar.fr/Upload/PAGE%20NEXUS/NEXUS_Traitement.svg" alt="" style="width: 28px; height: 28px; display: block;">
+                </div>
+                <span style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #1d1d1b; line-height: 1.35;">Traitement régulé précisément</span>
+              </div>
+            </div>
+
+            <div class="col-sm-6" style="padding: 8px;">
+              <div style="background: #ffffff; border: 1px solid rgba(0, 84, 135, 0.08); border-radius: 14px; padding: 16px; display: flex; align-items: center; gap: 14px; transition: all 0.3s ease; min-height: 84px;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 28px rgba(0, 84, 135, 0.08)'; this.style.borderColor='rgba(25, 182, 208, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(0, 84, 135, 0.08)'">
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 12px; background: rgba(25, 182, 208, 0.1); flex-shrink: 0;">
+                  <img src="https://website.poolstar.fr/Upload/PAGE%20NEXUS/NEXUS_Logiciels.svg" alt="" style="width: 28px; height: 28px; display: block;">
+                </div>
+                <span style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #1d1d1b; line-height: 1.35;">Mises à jour logicielles à distance</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Colonne droite : Mockup app cliquable -->
+      <div class="col-lg-5" style="padding: 0; text-align: center; align-self: center;">
+        <a href="https://www.poolex.fr/fr/page/wifi" target="_blank" rel="noopener" style="display: inline-block; text-decoration: none;">
+          <div style="position: relative; display: inline-block;">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 110%; height: 90%; background: radial-gradient(ellipse at center, rgba(25, 182, 208, 0.28) 0%, rgba(25, 182, 208, 0) 70%); pointer-events: none; z-index: 0;"></div>
+            <img src="https://website.poolstar.fr/Upload/PAGE%20NEXUS/iphone%20mockup%20app%20pollex%20page%20nexus%20(2).png" alt="Application Poolex Nexus" style="position: relative; z-index: 1; width: 100%; max-width: 420px; height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 40px 80px rgba(0, 84, 135, 0.28)); transition: transform 0.4s ease;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <style>
+    @media (max-width: 991px) {
+      section#application h2 { font-size: 32px !important; }
+      section#application .col-lg-5 { margin-top: 40px; }
+    }
+    @media (max-width: 575px) {
+      section#application h2 { font-size: 26px !important; }
+      section#application { padding: 60px 0 60px 0 !important; }
     }
   </style>
 
@@ -866,7 +584,7 @@
 <!-- ============================================= -->
 <!-- SECTION "SCÉNARIOS INTELLIGENTS" -->
 <!-- ============================================= -->
-<section id="scenarios" style="position: relative; background: linear-gradient(180deg, #f5f8fa 0%, #eaf4f6 50%, #f5f8fa 100%); padding: 24px 0 24px 0; overflow: hidden; min-height: 100vh; display: flex; align-items: center;">
+<section id="scenarios" style="position: relative; background: linear-gradient(180deg, #f5f8fa 0%, #eaf4f6 50%, #f5f8fa 100%); padding: 90px 0 90px 0; overflow: hidden;">
 
   <!-- Decorative gradient orbs -->
   <div style="position: absolute; top: 10%; left: -200px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(25, 182, 208, 0.1) 0%, rgba(25, 182, 208, 0) 70%); border-radius: 50%; pointer-events: none; z-index: 0;"></div>
@@ -1142,7 +860,7 @@
 <!-- ============================================= -->
 <!-- SECTION "ASSISTANCE CONNECTÉE" -->
 <!-- ============================================= -->
-<section id="assistance" style="position: relative; background: #ffffff; padding: 24px 0 24px 0; overflow: hidden; min-height: 100vh; display: flex; align-items: center;">
+<section id="assistance" style="position: relative; background: #ffffff; padding: 90px 0 90px 0; overflow: hidden;">
 
   <!-- Decorative gradient orb -->
   <div style="position: absolute; top: 30%; right: -150px; width: 450px; height: 450px; background: radial-gradient(circle, rgba(25, 182, 208, 0.06) 0%, rgba(25, 182, 208, 0) 70%); border-radius: 50%; pointer-events: none; z-index: 0;"></div>
@@ -1284,7 +1002,7 @@
     }
     @media (max-width: 575px) {
       section#assistance h2 { font-size: 30px !important; }
-      section#assistance { padding: 80px 0 80px 0 !important; }
+      section#assistance { padding: 60px 0 60px 0 !important; }
     }
   </style>
 
@@ -1293,7 +1011,7 @@
 <!-- ============================================= -->
 <!-- SECTION 9 — L'ÉCOSYSTÈME PRODUITS -->
 <!-- ============================================= -->
-<section id="ecosysteme" style="position: relative; background: linear-gradient(180deg, #f5f8fa 0%, #ffffff 100%); padding: 24px 0 24px 0; overflow: hidden; min-height: 100vh; display: flex; align-items: center;">
+<section id="ecosysteme" style="position: relative; background: linear-gradient(180deg, #f5f8fa 0%, #ffffff 100%); padding: 90px 0 90px 0; overflow: hidden;">
 
   <div class="container" style="max-width: 1240px; position: relative; z-index: 1; width: 100%;">
 
@@ -1417,85 +1135,15 @@
     }
     @media (max-width: 575px) {
       section#ecosysteme h2 { font-size: 30px !important; }
-      section#ecosysteme { padding: 80px 0 80px 0 !important; }
+      section#ecosysteme { padding: 60px 0 60px 0 !important; }
     }
   </style>
 
 </section>
-
-<!-- ============================================= -->
-<!-- SECTION 10 — PREUVES / RÉASSURANCE -->
-<!-- ============================================= -->
-<section id="preuves" style="position: relative; background: #f5f8fa; padding: 60px 0; border-top: 1px solid rgba(0, 84, 135, 0.05); border-bottom: 1px solid rgba(0, 84, 135, 0.05);">
-
-  <div class="container" style="max-width: 1240px;">
-
-    <div class="row align-items-center" style="margin: 0;">
-
-      <!-- Item 1 -->
-      <div class="col-6 col-md-4 col-lg-2" style="padding: 16px 12px; text-align: center; border-right: 1px solid rgba(0, 84, 135, 0.08);">
-        <div style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; background: rgba(25, 182, 208, 0.1); margin-bottom: 10px;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#005487" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-        </div>
-        <div style="font-family: 'Ubuntu', sans-serif; font-size: 13px; font-weight: 500; color: #2d3336; line-height: 1.3;">Pilotage à distance</div>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="col-6 col-md-4 col-lg-2" style="padding: 16px 12px; text-align: center; border-right: 1px solid rgba(0, 84, 135, 0.08);">
-        <div style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; background: rgba(25, 182, 208, 0.1); margin-bottom: 10px;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#005487" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-        </div>
-        <div style="font-family: 'Ubuntu', sans-serif; font-size: 13px; font-weight: 500; color: #2d3336; line-height: 1.3;">Suivi en temps réel</div>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="col-6 col-md-4 col-lg-2" style="padding: 16px 12px; text-align: center; border-right: 1px solid rgba(0, 84, 135, 0.08);">
-        <div style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; background: rgba(25, 182, 208, 0.1); margin-bottom: 10px;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#005487" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-        </div>
-        <div style="font-family: 'Ubuntu', sans-serif; font-size: 13px; font-weight: 500; color: #2d3336; line-height: 1.3;">Alertes automatiques</div>
-      </div>
-
-      <!-- Item 4 -->
-      <div class="col-6 col-md-4 col-lg-2" style="padding: 16px 12px; text-align: center; border-right: 1px solid rgba(0, 84, 135, 0.08);">
-        <div style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; background: rgba(25, 182, 208, 0.1); margin-bottom: 10px;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#005487" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
-        </div>
-        <div style="font-family: 'Ubuntu', sans-serif; font-size: 13px; font-weight: 500; color: #2d3336; line-height: 1.3;">Cloud &amp; IA</div>
-      </div>
-
-      <!-- Item 5 -->
-      <div class="col-6 col-md-4 col-lg-2" style="padding: 16px 12px; text-align: center; border-right: 1px solid rgba(0, 84, 135, 0.08);">
-        <div style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; background: rgba(25, 182, 208, 0.1); margin-bottom: 10px;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#005487" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        </div>
-        <div style="font-family: 'Ubuntu', sans-serif; font-size: 13px; font-weight: 500; color: #2d3336; line-height: 1.3;">Mises à jour à distance</div>
-      </div>
-
-      <!-- Item 6 -->
-      <div class="col-6 col-md-4 col-lg-2" style="padding: 16px 12px; text-align: center;">
-        <div style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; background: rgba(25, 182, 208, 0.1); margin-bottom: 10px;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#005487" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-        </div>
-        <div style="font-family: 'Ubuntu', sans-serif; font-size: 13px; font-weight: 500; color: #2d3336; line-height: 1.3;">Compatible smartphone</div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <style>
-    @media (max-width: 767px) {
-      section#preuves [style*="border-right"] { border-right: none !important; border-bottom: 1px solid rgba(0, 84, 135, 0.06); }
-    }
-  </style>
-
-</section>
-
 <!-- ============================================= -->
 <!-- SECTION 11 — FAQ -->
 <!-- ============================================= -->
-<section id="faq" style="position: relative; background: #ffffff; padding: 24px 0 24px 0; overflow: hidden; min-height: 100vh; display: flex; align-items: center;">
+<section id="faq" style="position: relative; background: #ffffff; padding: 90px 0 90px 0; overflow: hidden;">
 
   <!-- Decorative orb -->
   <div style="position: absolute; top: 20%; left: -150px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(25, 182, 208, 0.05) 0%, rgba(25, 182, 208, 0) 70%); border-radius: 50%; pointer-events: none; z-index: 0;"></div>
@@ -1653,7 +1301,7 @@
     }
     @media (max-width: 575px) {
       section#faq h2 { font-size: 30px !important; }
-      section#faq { padding: 80px 0 80px 0 !important; }
+      section#faq { padding: 60px 0 60px 0 !important; }
       section#faq h4 { font-size: 16px !important; }
     }
   </style>
@@ -1695,37 +1343,15 @@
         Découvrez la gamme Nexus ou échangez avec l'un de nos experts pour trouver la solution idéale pour votre bassin.
       </p>
 
-      <!-- 2 CTAs -->
+      <!-- CTA unique : Trouver un revendeur -->
       <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: center;">
 
-        <!-- CTA primaire : Demander conseil -->
         <a href="https://www.poolex.fr/fr/OuAcheter" target="_blank" rel="noopener" style="background: #ffffff; color: #005487; font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; padding: 16px 32px; border-radius: 100px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: all 0.25s ease; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);" onmouseover="this.style.background='#19B6D0'; this.style.color='#ffffff'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 32px rgba(25, 182, 208, 0.45)'" onmouseout="this.style.background='#ffffff'; this.style.color='#005487'; this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(0, 0, 0, 0.15)'">
-          Demander conseil
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Trouver un revendeur
           <span>→</span>
         </a>
 
-        <!-- CTA secondaire : Trouver un revendeur -->
-        <a href="https://www.poolex.fr/fr/OuAcheter" target="_blank" rel="noopener" style="background: rgba(255, 255, 255, 0.12); color: #ffffff; font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; padding: 15px 30px; border-radius: 100px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); transition: all 0.25s ease;" onmouseover="this.style.background='rgba(255, 255, 255, 0.2)'; this.style.borderColor='rgba(255, 255, 255, 0.5)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.12)'; this.style.borderColor='rgba(255, 255, 255, 0.3)'">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Trouver un revendeur
-        </a>
-
-      </div>
-
-      <!-- Ligne de confiance en bas -->
-      <div style="margin-top: 64px; display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 24px; padding-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.15);">
-        <div style="display: inline-flex; align-items: center; gap: 8px; color: rgba(255, 255, 255, 0.8); font-family: 'Ubuntu', sans-serif; font-size: 13px; font-weight: 400;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#19B6D0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          <span>Installation professionnelle</span>
-        </div>
-        <div style="display: inline-flex; align-items: center; gap: 8px; color: rgba(255, 255, 255, 0.8); font-family: 'Ubuntu', sans-serif; font-size: 13px; font-weight: 400;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#19B6D0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          <span>Garantie constructeur</span>
-        </div>
-        <div style="display: inline-flex; align-items: center; gap: 8px; color: rgba(255, 255, 255, 0.8); font-family: 'Ubuntu', sans-serif; font-size: 13px; font-weight: 400;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#19B6D0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          <span>Application iOS &amp; Android</span>
-        </div>
       </div>
 
     </div>
